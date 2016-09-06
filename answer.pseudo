@@ -1,0 +1,23 @@
+<?php
+
+// this is function name example with 1 parameter  'name' 
+function example($name)
+{
+  $min= 6;
+  $max=15; // we can change it but we have to generate bw 6-15
+    //generate random
+   $x= rand ( $min , $max );
+    // concatination of 2 variable name and random no
+   return $name." ".$x;
+}
+// code for take an input from user on command lineotherwise we can use it from html form but here it is command line
+$temp =  fopen ("php://stdin","r");
+$line = fgets($temp);
+// line variable has a data calling function
+
+echo example($line);
+
+fclose($temp);
+?>
+
+
